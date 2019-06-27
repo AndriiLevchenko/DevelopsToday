@@ -1,0 +1,177 @@
+
+@media (min-width: 320px) and (max-width: 614px) {
+.introduction{
+	width: 320px;
+	min-height: 901px;
+	margin: 0 auto;
+	padding-right: 15px;
+}
+.introduction__text{
+	width: 310px;
+	margin-top: 22px;
+}
+.introduction__technologies{
+
+	margin: 1px, auto;
+	padding: 1px;
+}
+.introduction h2{
+	margin-left: 17px;
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	line-height: 28px;
+	color: black;
+}
+.web-technology{
+	display: flex;
+	flex-direction: column;
+	width: 320px;
+	min-height: 243px;
+   margin: 1px, auto;
+	padding: 1px;
+}
+.web-technology img{
+	width: 87px;
+    margin-top: 1px;
+  
+}
+.web-technology__text{
+	width: 280px;
+}
+.web-technology h5{
+	margin-left: 0px;
+    margin-top: 6px;
+    margin-bottom: 1px;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+.web-technology p{
+	font-size: 14px;
+    margin: 7px 0px 0 0px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+}
+
+@media (min-width: 615px) and (max-width: 1023px) {
+.introduction{
+	width: 615px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-bottom: 77px;
+    overflow: hidden;
+}
+.introduction__text{
+	width: 452px;
+	margin-top: 56px;
+}
+.introduction__technologies{
+	
+	
+	padding-left: 47px;
+}
+.introduction h2{
+	margin-left: 17px;
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-align: center;
+	line-height: 39px;
+	color: black;
+}
+
+.web-technology{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	min-height: 60px;
+    margin: 0 4px;
+    padding: 2px;
+}
+.web-technology img{
+	
+   width: 80px;
+
+}
+.web-technology__text{
+	min-width: 400px;
+
+}
+.web-technology h5{
+	margin-left: 30px;
+    margin-top: 14px;
+    margin-bottom: 1px;
+    letter-spacing: -0.4px;
+    text-align: left;
+}
+.web-technology p{
+	font-size: 12px;
+    margin: 7px 0px 0 30px;
+    text-align: left;
+    letter-spacing: -0.15px;
+    line-height: 18px;
+}
+}
+@media (min-width: 1024px) and (max-width: 2560px) {
+.introduction{
+	width: 1024px;
+	margin: 0 auto;
+	padding-right: 0px;
+	padding-bottom: 11px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.introduction__text{
+	width: 588px;
+}
+.introduction__technologies{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 32px;
+	
+}
+.introduction h2{
+	margin-left: 13px;
+	letter-spacing: 0.2px;
+	text-align: center;
+	line-height: 52px;
+	color: #111;
+}
+
+.web-technology{
+	display: flex;
+	justify-content: space-around;
+	width: 311px;
+	height: 320px;
+    margin: 0 4px;
+    padding-left: 2px;
+    float: left;
+}
+.web-technology img{
+	width: 72px;
+	margin: 9px;
+
+}
+.web-technology__text{
+	width: 258px;
+	margin: 2px;
+	padding: 2px;
+	float: left;
+}
+.web-technology h5{
+	margin-left: 0px;
+    margin-top: 18px;
+    margin-bottom: 1px;
+    font-size: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.web-technology p{
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+}

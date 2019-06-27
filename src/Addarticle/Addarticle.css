@@ -1,0 +1,494 @@
+
+@media (min-width: 320px) and (max-width: 614px) {
+.register{
+	height: 765px;
+	position: relative;
+	padding-top: 9px;
+	background-color: #fff;
+}
+.register h2{
+	margin-left: 2px;
+	margin-top: 31px;
+	margin-bottom: 1px;
+	font-size: 26px;
+	letter-spacing: 0px;
+	text-align: center;
+	color: black;
+}
+.register__h4{
+	width: 298px;
+	margin: 0 auto;
+}
+.register h4{
+	margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    text-align: center;
+    color: black;
+}
+.register .br {
+	display: inline 
+}
+.register p{
+	position: absolute;
+    left: 8px;
+    top: -14px;
+    margin: 0;
+    padding: 0 4px;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left;
+    color: #444;
+    z-index: 1;
+    background-color: white;
+}
+.register__form{
+	width: 315px;
+    padding: 24px 0px 47px 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.register__input{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 45px;
+    margin: 30px 50px;
+    border: 1px solid #666;
+    border-radius: 2px;
+}
+input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: inherit;
+}
+input:focus{
+	outline: none;
+}
+#input__email-id{
+	margin-left: 14px;
+}
+.register__select{
+	position: relative;
+    width: 288px;
+    height: 56px;
+    margin-top: 2px;
+    margin-left: 13px;
+    float: left;
+}
+select{
+	width: 100%;
+	height: 56px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	background-color: inherit;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.register__select img{
+	position: absolute;
+    top: 23px;
+    left: 259px;
+}
+.register__select span{
+	margin-left: 20px;
+}
+.register__upload{
+	position: relative;
+    width: 232px;
+    height: 43px;
+    margin-top: 35px;
+    margin-left: 13px;
+    padding-top: 11px;
+    padding-left: 1px;
+    border: 1px solid #666;
+    font-size: 12px;
+    font-weight: 600;
+    float: left;
+}
+.register__upload__label{
+	width: 200px;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    margin-top: 4px;
+    margin-left: 16px;
+}
+.register__upload-button__label {
+	width: 220px;
+    display: inline-block;
+    margin-left: 2px;
+    padding: 6px 12px 24px 9px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+}
+.register__upload-button{
+	position: absolute;
+	/*background-image: url('../../public/icons/upload.svg');*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+    top: -1px;
+    left: 232px;
+    width: 52px;
+    height: 52px;
+    margin-top: 0px;
+    border: 2px solid #ef6c00;
+    font-size: 16px;
+    font-weight: 600;
+    color: transparent;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+#input__upfile-id{
+	height: 0px; 
+	width:0px; 
+	overflow:hidden;
+}
+.register__button{
+	width: 293px;
+    height: 41px;
+    margin-top: 63px;
+    margin-left: 11px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+}	
+}				
+
+@media (min-width: 615px) and (max-width: 1023px) {
+.register{
+background-color: #fff;
+}
+.register h2{
+	margin-left: 2px;
+	margin-top: 31px;
+	margin-bottom: 1px;
+    font-size: 30px;
+	letter-spacing: 2px;
+	text-align: center;
+	color: black;
+}
+.register__h4{
+	width: 298px;
+	margin: 0 auto;
+}
+.register h4{
+	margin-top: 21px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+    color: black;
+}
+.register .br {
+    display: none;
+}
+.register p{
+	position: absolute;
+    left: 8px;
+    top: -14px;
+    margin: 0;
+    padding: 0 4px;
+    font-size: 8px;
+    font-weight: 400;
+    text-align: left;
+    color: #444;
+    z-index: 1;
+    background-color: white;
+}
+.register__form{
+	width: 615px;
+    padding: 24px 0px 40px 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.register__input{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 45px;
+    margin: 30px 50px;
+    border: 1px solid #666;
+    border-radius: 2px;
+}
+input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: inherit;
+}
+input:focus{
+	outline: none;
+}
+#input__email-id{
+	margin-left: 14px;
+}
+.register__select{
+	    position: relative;
+    width: 275px;
+    height: 50px;
+    margin-top: 19px;
+    margin-left: 20px;
+    float: left;
+}
+select{
+	width: 100%;
+	height: 44px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	background-color: inherit;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.register__select img{
+	position: absolute;
+	top: 18px;
+	left: 249px;
+}
+.register__upload{
+	position: relative;
+    width: 170px;
+    height: 33px;
+    margin-top: 18px;
+    margin-left: 24px;
+    padding-top: 11px;
+    padding-left: 1px;
+    border: 1px solid #666;
+    font-size: 12px;
+    font-weight: 600;
+    float: left;
+}
+.register__upload__label{
+	font-size: 8px;
+	letter-spacing: 0.4px;
+	margin-top: 2px;
+	margin-left: 13px;
+	white-space: nowrap;
+}
+.register__upload-button__label {
+	width: 140px;
+    display: inline-block;
+    margin-left: 2px;
+    padding: 4px 12px 16px 9px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+}
+.register__upload-button{
+	position: absolute;
+    top: -1px;
+    left: 170px;
+    width: 41px;
+    height: 12px;
+    margin-top: 0px;
+    padding: 15px 30px;
+    border: 2px solid #ef6c00;
+    font-size: 16px;
+    font-weight: 600;
+    color: orange;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+#input__upfile-id{
+	height: 0px; 
+	width:0px; 
+	overflow:hidden;
+}
+.register__button{
+	width: 233px;
+    height: 32px;
+    margin-top: 0;
+    margin: 43px 192px 56px 192px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+}				
+}
+@media (min-width: 1024px) and (max-width: 2560px) {
+.register{
+background-color: #fff;
+}
+.register h2{
+	margin-left: 2px;
+	margin-top: 34px;
+	margin-bottom: 1px;
+	letter-spacing: 0.4px;
+	text-align: center;
+	color: #878787;
+}
+.register__h4{
+	width: 724px;
+	margin: 0 auto;
+}
+.register h4{
+	margin-top: 13px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #878787;
+}
+.br{
+	display: none;
+}
+.register p{
+	position: absolute;
+	left: 15px;
+	top: -15px;
+	margin: 0;
+	padding: 0 4px;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left;
+    color: #444;
+    z-index: 1;
+    background-color: white;
+}
+.register__form{
+	width: 990px;
+    padding: 40px 0px 40px 11px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.register__input{
+    display: flex;
+    justify-content: space-between;
+	position: relative;
+	height: 55px;
+	margin: 30px 50px;
+	border: 1px solid #666;
+	border-radius: 2px;
+}
+input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: inherit;
+}
+input:focus{
+	outline: none;
+}
+#input__email-id{
+	margin-left: 14px;
+}
+.register__select{
+    display: flex;
+    justify-content: space-between;
+	position: relative;
+	width: 90%;
+	height: 60px;
+	margin: 30px 50px;
+	
+
+}
+select{
+	width: 100%;
+	height: 55px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	background-color: inherit;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.register__select img{
+	position: absolute;
+	top: 22px;
+	left: 810px;
+}
+.register__upload{
+    display: flex;
+    justify-content: space-between;
+	position: relative;
+	width: 320px;
+    height: 43px;
+    margin: 30px 50px;
+    padding-top: 11px;
+    padding-left: 1px;
+    border: 1px solid #666;
+    font-size: 20px;
+	font-weight: 600;
+}
+.register__upload__label{
+	font-size: 11px;
+	letter-spacing: 0.2px;
+	margin-top: 2px;
+	margin-left: 13px;
+}
+.register__upload-button__label {
+	width: 310px;
+    display: inline-block;
+    margin-left: 2px;
+    padding: 6px 12px 16px 12px;
+    font-size: 15px;
+	font-weight: 600;
+    color: #444;
+    cursor: pointer;
+}
+.register__upload-button{
+	position: absolute;
+    top: -1px;
+    left: 322px;
+    width: 67px;
+    height: 22px;
+    margin-top: 0px;
+    padding: 15px 30px;
+    border: 2px solid #ef6c00;
+    font-size: 20px;
+    font-weight: 600;
+    color: orange;
+    cursor: pointer;
+}
+.register__upload-button button{
+    width: 91px;
+    height: 42px;
+    margin-top: 0px;
+    padding: 10px;
+    border: 2px solid #ef6c00;
+    font-size: 16px;
+    font-weight: 600;
+    color: orange;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+#input__upfile-id{
+	height: 0px; 
+	width:0px; 
+	overflow:hidden;
+}
+.register__button{
+	width: 290px;
+    height: 40px;
+    margin-top: 0;
+    margin: 55px 357px 99px 347px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+}				
+}

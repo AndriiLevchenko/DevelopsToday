@@ -1,0 +1,10 @@
+
+
+form span{
+    color: red;
+    font-size: 11px;
+}
+
+.invalid p{
+    color: #f01f30;
+}
