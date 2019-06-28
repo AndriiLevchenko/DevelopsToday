@@ -55,7 +55,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    height: 45px;
+    height: 25px;
     margin: 30px 50px;
     border: 1px solid #666;
     border-radius: 2px;
@@ -165,6 +165,16 @@ input[type="file"] {
     font-size: 16px;
     font-weight: 600;
 }	
+textarea{
+    width: 66%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 85px;
+    margin: 30px 49px;
+    border: 1px solid #666;
+    border-radius: 2px;
+}   
 }				
 
 @media (min-width: 615px) and (max-width: 1023px) {
@@ -219,7 +229,7 @@ background-color: #fff;
     display: flex;
     justify-content: space-between;
     position: relative;
-    height: 45px;
+    height: 29px;
     margin: 30px 50px;
     border: 1px solid #666;
     border-radius: 2px;
@@ -322,7 +332,17 @@ input[type="file"] {
     color: #111;
     font-size: 14px;
     font-weight: 600;
-}				
+}		
+textarea{
+    width: 83%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 105px;
+    margin: 30px 49px;
+    border: 1px solid #666;
+    border-radius: 2px;
+}   		
 }
 @media (min-width: 1024px) and (max-width: 2560px) {
 .register{
@@ -375,7 +395,7 @@ background-color: #fff;
     display: flex;
     justify-content: space-between;
 	position: relative;
-	height: 55px;
+	height: 40px;
 	margin: 30px 50px;
 	border: 1px solid #666;
 	border-radius: 2px;
@@ -490,5 +510,15 @@ input[type="file"] {
     color: #111;
     font-size: 18px;
     font-weight: 600;
-}				
+}			
+textarea{
+    width: 89%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 115px;
+    margin: 30px 53px;
+    border: 1px solid #666;
+    border-radius: 2px;
+}	
 }

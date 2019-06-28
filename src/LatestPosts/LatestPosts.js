@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import Articlecard from '../Articlecard';
-import './Articles.css';
+import './LatestPosts.css';
 import axios from 'axios';
 import Button from '../components/Button/Button';
+import {connect} from 'react-redux';
 
-class Articles extends Component{
+class LatestPosts extends Component{
 
         state={
-            ArticlesOpen: 6,            // Количество статей на странице 6 или 3
+            LatestPostsOpen: 6,            // Количество статей на странице 6 или 3
             UsersAddNumber: 6,       // Добавляется статей на странице 6 или 3
             narrowScreenFlag: true,  // Узкий-широкий экран     
             isUsersButton: true ,    // Наличие-отсутствие кнопки Show more 
-            userslist:[],           // Массив со всеми Articles
+            userslist:[],           // Массив со всеми LatestPosts
             class: 'smallArticlecard' //просмотр полного Articlecerd
         }
                                      //Получение userslist.json с сервера
@@ -26,24 +27,24 @@ class Articles extends Component{
             });
         }    
                                          //Добавление по 6 карточек пользователей на страницу по клику
-        showMoreArticles =()=> {              
-            if(this.state.ArticlesOpen < this.state.userslist.length-this.state.UsersAddNumber){
-                this.setState({ArticlesOpen: this.state.ArticlesOpen+this.state.UsersAddNumber});
+        showMoreLatestPosts =()=> {              
+            if(this.state.LatestPostsOpen < this.state.userslist.length-this.state.UsersAddNumber){
+                this.setState({LatestPostsOpen: this.state.LatestPostsOpen+this.state.UsersAddNumber});
             } else {
-                this.setState({     ArticlesOpen:     this.state.userslist.length,
+                this.setState({     LatestPostsOpen:     this.state.userslist.length,
                                     isUsersButton: false                          
                 }); 
             }     
         }  
                                          // Переход из Хедера по клику на карточку Superstar
         showSuperstar(){                   
-            this.setState({    ArticlesOpen:     this.state.userslist.length,
+            this.setState({    LatestPostsOpen:     this.state.userslist.length,
                                isUsersButton: false               
             });      
         }  
                                          // Изменение State при узком экране
         narrowScreenChange(){
-            this.setState({ArticlesOpen: 3, UsersAddNumber: 3, narrowScreenFlag: false});
+            this.setState({LatestPostsOpen: 3, UsersAddNumber: 3, narrowScreenFlag: false});
         }
 
         toggleArticlecard(e){
@@ -52,11 +53,13 @@ class Articles extends Component{
         }
 
     render(){         
-        const ArticlesArrayOpen=this.state.userslist.slice(this.state.userslist.length-this.state.ArticlesOpen).reverse();
+        const LatestPostsArrayOpen=this.state.userslist.slice(this.state.userslist.length-this.state.LatestPostsOpen).reverse();
         const UsersButton=this.state.isUsersButton&&
-                            <Button onClick={this.showMoreArticles} className='buttonShowmore' value='Show more'  />  
+                            <Button onClick={this.showMoreLatestPosts} className='buttonShowmore' value='Show more'  />  
 
         let cls=this.state.class;
+     
+      
 
         if (window.innerWidth <615){
             if(this.state.narrowScreenFlag ){ 
@@ -65,11 +68,11 @@ class Articles extends Component{
         return(
             <div align='center'>
                 <div className='users'>
-                    <h2>Frontend розробка</h2>
+                    <h2>Latest Posts</h2>
                     <h5>Статті відсортовані по даті публікації</h5>  
                         {/* Формирование карточек Articlecard */}                
                         {
-                            ArticlesArrayOpen.map(function(item, i){
+                            LatestPostsArrayOpen.map(function(item, i){
                                 console.log(item.listid);
                                 //console.log(this.state.classs);
                                 return( 
@@ -83,7 +86,7 @@ class Articles extends Component{
                                             picture={item.picture} 
                                             name={item.name} 
                                             position={item.position}
-                                            email={item.email} 
+                                            date={item.date} 
                                             telephone={item.telephone}
                                             onClick={item.onClick}
                                         />                           
@@ -98,4 +101,4 @@ class Articles extends Component{
         )
     }
 }
-export default Articles;
+export default LatestPosts;

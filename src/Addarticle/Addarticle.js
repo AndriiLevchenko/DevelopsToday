@@ -5,7 +5,6 @@ import firebase from 'firebase/app';
 import 'firebase/storage';
 import config from '../firebase-config';
 import Input from '../components/Input/Input';
-import Select from '../components/Select/Select';
 import InputFile from '../components/InputFile/InputFile';
 import Button from '../components/Button/Button';
 
@@ -101,21 +100,7 @@ class Addarticle extends Component{
 
           
         }
-                     //Запись в State Position выбранного из формы Select и его валидация
-        handleChangeSelect = event =>{
-            console.log(event.target.value);
-            const newArticleDate =  new Date();
-            console.log(newArticleDate.getFullYear());
-            this.setState({newArticleDate });
-              
-            
-              
-                console.log(this.state.newArticleTheme);
-              
-                           
-                               console.log('position:  ', newArticleDate  );
-        }
-
+                 
                          //Запись в State фотографии из формы Input
         handleChangeFile =event=> {
             const selectedFile=event.target.files[0];
@@ -129,6 +114,24 @@ class Addarticle extends Component{
         fileUploadHandler =(e) =>{
             e.preventDefault();
 
+            //Получение даты
+            function formatDate(date) {
+
+                  var dd = date.getDate();
+                  if (dd < 10) dd = '0' + dd;
+
+                  var mm = date.getMonth() + 1;
+                  if (mm < 10) mm = '0' + mm;
+
+                  var yy = date.getFullYear() % 100;
+                  if (yy < 10) yy = '0' + yy;
+
+                  return dd + '.' + mm + '.20' + yy;
+                }
+
+                var d = new Date(2014, 0, 30); // 30 Янв 2014
+                alert( formatDate(d) ); // '30.01.14'
+
             // Upload file
             const {selectedFile}=this.state;    
             const uploadTask=storage.ref(`avatars/${selectedFile.name}`).put(selectedFile);
@@ -141,7 +144,14 @@ class Addarticle extends Component{
                 () =>{
                     storage.ref('avatars').child(selectedFile.name).getDownloadURL().then(url =>{
                         this.setState({url});
+                        //Получение даты
+
+                        const d =  new Date();
+                        console.log(d.getFullYear());
+                        const newArticleDate=formatDate(d);
+                        this.setState({newArticleDate });
                                             //Формирование нового User
+
                         const newUser={
                             "listid":Object.values(this.state.articlesArray.data).length + 1,
                             "picture":this.state.url,          
@@ -166,7 +176,7 @@ class Addarticle extends Component{
     render(){
         return (
            <div className='register'>
-                <h2>Написати статтю </h2>
+                <h2>Add an article </h2>
         
                 <div className='register__form'>
                     <form>
@@ -185,19 +195,18 @@ class Addarticle extends Component{
                             name= ' Post short description'
                             onChange={event => this.handleChangeNameEmailPhone(event, 'inputName')}
                         />
-                        <Input
-                            type='text'
-                            value={this.state.validationState.inputText.newArticleNameText}
-                            placeholder= '    Введи текст статті'
-                            name='    Article text' 
-                            onChange={event => this.handleChangeNameEmailPhone(event, 'inputText')}
-                        />
+                        <div >
 
-                                {/*  Render Select Theme */}
-                        <Select 
-                            articleTheme={this.state.newArticleTheme}
-                            onChange={event => this.handleChangeSelect(event)}
-                        /> 
+                            <textarea
+                                value={this.state.validationState.inputText.newArticleNameText}
+                                placeholder= ' Введи текст статті'
+                                name='    Article text' 
+                                onChange={event => this.handleChangeNameEmailPhone(event, 'inputText')}
+                                rows='9'>
+                            </textarea>
+                        </div>    
+
+                
 
                                 {/*  Render File Upload */}
                         <InputFile
@@ -207,7 +216,7 @@ class Addarticle extends Component{
                         <Button  className="register__button" 
                                  onClick={this.fileUploadHandler} 
                                  disabled={!this.state.isFormValid} 
-                                 value="Додати" 
+                                 value="Add" 
                         />
                       
                     </form>     

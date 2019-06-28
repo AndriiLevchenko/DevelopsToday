@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Button from './components/Button/Button';
+import {withRouter} from 'react-router-dom';
 
-class Userscard extends Component {
+
+class Articlecard extends Component {
 
     state={
         class:'smallArticlecard'
@@ -17,11 +19,13 @@ class Userscard extends Component {
     }
 
     render(){
+        console.log(this.props);
     	return(
     		<div className={this.state.class} >
                 <Button
                     className='article__button' 
                     onClick={this.cardToggle.bind(this)} 
+                    //onClick={()=>this.props.history.push('/LatestPosts/' + this.props.keykey )}
                     value='Open/Close' 
                 />
                 <div className='users__picture'>
@@ -31,11 +35,12 @@ class Userscard extends Component {
                     <h4>{this.props.name}</h4>   
                     <p className='p-position'>{this.props.position}</p>
                     <p className='p-email'>{this.props.email}</p>
-                    <p className='p-telephone'>{this.props.telephone}</p>          
+                    <p className='p-telephone'>{this.props.telephone}</p>  
+                    <p className='p-telephone'>{this.props.date}</p>         
                 </div>    
             </div>
     	)
     }
 }
 
-export default Userscard
+export default withRouter(Articlecard);
